@@ -9,7 +9,7 @@ from .models import UrlaubsAntrag, Mitarbeiter, Krankmeldung # Alle unsere Daten
 # und das E-Mail-System hier noch implementieren.
 # -------------------------
 
-@login_required
+
 def home(request):
     """Zeigt die Startseite / das Dashboard an."""
     # Hier wird die Logik aus Schritt 9 ("Der Türsteher") implementiert
