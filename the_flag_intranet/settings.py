@@ -95,3 +95,12 @@ EMAIL_PORT = os.getenv('EMAIL_PORT')
 EMAIL_HOST_USER = os.getenv('EMAIL_USER')
 EMAIL_HOST_PASSWORD = os.getenv('EMAIL_PASSWORD')
 EMAIL_USE_TLS = True
+# -----------------------------------------------------------
+# AUTHENTIFIZIERUNG UND UMLEITUNGEN
+# -----------------------------------------------------------
+
+# Wo soll der User nach dem Login hingeleitet werden? -> Zum Dashboard
+LOGIN_REDIRECT_URL = '/' 
+
+# Wo soll der User nach dem Logout hingeleitet werden? -> Zur Startseite (die Login anzeigt)
+LOGOUT_REDIRECT_URL = '/'
