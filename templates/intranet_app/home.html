@@ -14,7 +14,7 @@
 <hr>
 <form method="post" action="/accounts/logout/">
     {% csrf_token %} 
-    <button type="submit" style="background:none; border:none; padding:0; color:blue; text-decoration:underline; cursor:pointer;">
+    <button type="submit" name="logout" style="background:none; border:none; padding:0; color:blue; text-decoration:underline; cursor:pointer;">
         Ausloggen
     </button>
 </form>
