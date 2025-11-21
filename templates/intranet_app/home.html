@@ -12,11 +12,11 @@
 </body>
 </html>
 <hr>
-    <form method="post" action="{% url 'logout' %}">
-        {% csrf_token %} 
-        <button type="submit" style="background:none; border:none; padding:0; color:blue; text-decoration:underline; cursor:pointer;">
-            Ausloggen
-        </button>
-    </form>
+<form method="post" action="/accounts/logout/">
+    {% csrf_token %} 
+    <button type="submit" style="background:none; border:none; padding:0; color:blue; text-decoration:underline; cursor:pointer;">
+        Ausloggen
+    </button>
+</form>
 </body>
 </html>
