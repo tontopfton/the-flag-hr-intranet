@@ -3,9 +3,7 @@
 from django.contrib import admin
 from django.urls import path, include
 from intranet_app.views import home
-# NEU: Wir importieren die Standard-Logout-View
-from django.contrib.auth.views import LogoutView 
-
+# WICHTIG: Die Zeile 'from django.contrib.auth.views import LogoutView' entfernen, falls sie noch existiert!
 
 urlpatterns = [
     # Admin-Bereich
@@ -14,13 +12,9 @@ urlpatterns = [
     # Unsere Haupt-App
     path('', home, name='home'),
     
-    # Standard-Pfade für Anmeldung/Passwort-Zurücksetzung
-    # (Enthält login/)
+    # Standard-Pfade für Anmeldung/Abmeldung/Passwort-Zurücksetzung
+    # (Enthält login/ und logout/, sowie die automatische Weiterleitung)
     path('accounts/', include('django.contrib.auth.urls')),
     
-    # NEU: Wir definieren den Logout-Pfad explizit
-    # Wenn Django diesen Pfad sieht, leitet er automatisch zu LOGOUT_REDIRECT_URL weiter
-    path('accounts/logout/', LogoutView.as_view(), name='logout'),
+    # Die explizite 'logout'-Zeile WIRD ENTFERNT, da sie redundant ist.
 ]
-
-# WICHTIG: Die URL 'accounts/logout/' muss nach dem 'include('django.contrib.auth.urls')' stehen!
